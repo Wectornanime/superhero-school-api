@@ -9,6 +9,18 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "sqlite"
   url      = env("DATABASE_URL")
+}
+
+model Super {
+  id        String    @id @default(uuid())
+  heroName  String
+  firstName String
+  lastName  String
+  realName  String?
+  birthDate DateTime?
+  race      String?
+  height    Int?
+  weight    Int?
 }
