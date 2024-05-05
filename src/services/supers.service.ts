@@ -9,10 +9,14 @@ class SupersService {
   };
 
   async findOne(id: string) {
-    const supers = await prisma.super.findUnique({
-      where: { id }
-    });
-    return supers;
+    try {
+      const supers = await prisma.super.findUnique({
+        where: { id }
+      });
+      return supers;
+    } catch {
+      return '';
+    };
   };
 
   async create(dto: Super) {
@@ -21,19 +25,26 @@ class SupersService {
   };
 
   async update(id: string, dto: Super) {
-    const newSuperData = await prisma.super.update({
-      where: { id },
-      data: dto
-    });
-
-    return newSuperData;
+    try {
+      const newSuperData = await prisma.super.update({
+        where: { id },
+        data: dto
+      });
+      return newSuperData;
+    } catch {
+      return '';
+    };
   };
 
   async delete(id: string) {
-    const deleted = await prisma.super.delete({
-      where: { id }
-    });
-    return deleted;
+    try {
+      const deleted = await prisma.super.delete({
+        where: { id }
+      });
+      return deleted;
+    } catch {
+      return '';
+    };
   };
 
 };
