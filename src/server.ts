@@ -1,4 +1,3 @@
-// import { env } from "process";
 import app from "./app";
 import { env } from "process";
 import dotenv from 'dotenv';
