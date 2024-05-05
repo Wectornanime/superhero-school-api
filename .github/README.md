@@ -117,7 +117,7 @@ npm run start
 
 ## Desenvolvedores/Contribuintes :octocat:
 
-| [`<img src="https://github.com/wectornanime.png" width=115><br>``<sub>`Wectornanime Felipe `</sub>`](https://github.com/wectornanime) |
+| [<img src="https://github.com/wectornanime.png" width=115><br><sub>Wectornanime Felipe</sub>](https://github.com/wectornanime) |
 | :---: |
 
 ## Licença
