@@ -8,11 +8,9 @@ class SupersService {
     return supers;
   };
 
-  async findOne(superId: string) {
-    const supers = await prisma.super.findMany({
-      where: {
-        id: superId
-      }
+  async findOne(id: string) {
+    const supers = await prisma.super.findUnique({
+      where: { id }
     });
     return supers;
   };
@@ -22,22 +20,18 @@ class SupersService {
     return newSuper;
   };
 
-  async update(superId: string, dto: Super) {
+  async update(id: string, dto: Super) {
     const newSuperData = await prisma.super.update({
-      where: {
-        id: superId
-      },
+      where: { id },
       data: dto
     });
 
     return newSuperData;
   };
 
-  async delete(superId: string) {
+  async delete(id: string) {
     const deleted = await prisma.super.delete({
-      where: {
-        id: superId
-      }
+      where: { id }
     });
     return deleted;
   };
