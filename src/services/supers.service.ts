@@ -1,4 +1,6 @@
-import { PrismaClient, Super } from "@prisma/client";
+import { PrismaClient } from "@prisma/client";
+import { z } from "zod";
+import { CreateSuperDto, UpdateSuperDto } from "../dtos/supers.dto";
 
 const prisma = new PrismaClient;
 
@@ -19,12 +21,12 @@ class SupersService {
     };
   };
 
-  async create(dto: Super) {
+  async create(dto: z.infer<typeof CreateSuperDto>) {
     const newSuper = await prisma.super.create({ data: dto });
     return newSuper;
   };
 
-  async update(id: string, dto: Super) {
+  async update(id: string, dto: z.infer<typeof UpdateSuperDto>) {
     try {
       const newSuperData = await prisma.super.update({
         where: { id },
