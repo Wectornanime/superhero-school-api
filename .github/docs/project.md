@@ -1,6 +1,9 @@
 # Superhero School API
 
 ### Tópicos
+- [Descrição do projeto](#descrição-do-projeto)
+- [Como rodar a aplicação](#como-rodar-a-aplicação)
+- [Estrutura do projeto](#estrutura-do-projeto)
 
 ## Descrição do projeto
 
