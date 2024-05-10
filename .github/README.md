@@ -96,7 +96,8 @@ npm run start
 
 ## Resolvendo problemas ❗️
 
-❌ Rodar a aplicação em container docker.
+❌ Rodar a aplicação em container docker. <br>
+❌ Cadastrar datas no sistema.
 
 ## Tarefas em aberto
 
