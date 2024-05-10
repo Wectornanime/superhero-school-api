@@ -12,22 +12,14 @@
 
 ### Tópicos ⭐
 
-🔹 [Descrição do projeto](#descrição-do-projeto)
-
-🔹 [Funcionalidades](#funcionalidades)
-
-🔹 [Deploy da Aplicação](#layout-ou-deploy-da-aplicação-)
-
-🔹 [Pré-requisitos](#pré-requisitos-)
-
-🔹 [Como rodar a aplicação](#como-rodar-a-aplicação-️)
-
-🔹 [Documentação](#documentação-)
-
-🔹 [Resolvendo problemas](#resolvendo-problemas-️)
-
-🔹 [Tarefas em aberto](#tarefas-em-aberto)
-
+🔹 [Descrição do projeto](#descrição-do-projeto) <br>
+🔹 [Funcionalidades](#funcionalidades) <br>
+🔹 [Deploy da Aplicação](#layout-ou-deploy-da-aplicação-) <br>
+🔹 [Pré-requisitos](#pré-requisitos-) <br>
+🔹 [Como rodar a aplicação](#como-rodar-a-aplicação-️) <br>
+🔹 [Documentação](#documentação-) <br>
+🔹 [Resolvendo problemas](#resolvendo-problemas-️) <br>
+🔹 [Tarefas em aberto](#tarefas-em-aberto) <br>
 🔹 [Desenvolvedores](#desenvolvedorescontribuintes-octocat)
 
 ## Descrição do projeto
@@ -37,11 +29,11 @@ O projeto é uma API de uma escola de super heróis simples que contem apenas um
 
 ## Funcionalidades
 
-✔️ API CRUD completo - ler, criar, atualizar, deletar dados cadatrados no banco.
-✔️ Validação de dados.
-❌ Segurança das rotas da API.
-⚠️ Segurança da aplicação.
-⚠️ Contem apenas uma rota.
+✔️ API CRUD completo - ler, criar, atualizar, deletar dados cadatrados no banco. <br>
+✔️ Validação de dados. <br>
+❌ Segurança das rotas da API. <br>
+⚠️ Segurança da aplicação. <br>
+⚠️ Contem apenas uma rota. <br>
 ❌ Rodar a aplicação em container docker.
 
 
@@ -51,8 +43,7 @@ O projeto é uma API de uma escola de super heróis simples que contem apenas um
 
 ## Pré-requisitos 💻
 
-⚠️ [Node Js](https://nodejs.org/en/download/)
-
+⚠️ [Node Js](https://nodejs.org/en/download/) <br>
 ⚠️ [Mongodb](https://www.mongodb.com/)
 
 ## Como rodar a aplicação 🕹️
@@ -100,19 +91,19 @@ npm run start
 
 ## Documentação 📚
 
-🔹 [Documentação da Api](docs/api.md)
-
+🔹 [Documentação da Api](docs/api.md) <br>
 🔹 [Documentação do projeto](docs/project.md)
 
 ## Resolvendo problemas ❗️
 
-❌ Rodar a aplicação em container docker.
+❌ Rodar a aplicação em container docker. <br>
+❌ Cadastrar datas no sistema.
 
 ## Tarefas em aberto
 
-⚠️ Segurança das rotas da API.
-⚠️ Segurança da aplicação.
-⚠️ Criar novas rotas.
+⚠️ Segurança das rotas da API. <br>
+⚠️ Segurança da aplicação. <br>
+⚠️ Criar novas rotas. <br>
 💡 Criação de imagem docker.
 
 ## Desenvolvedores/Contribuintes :octocat:
