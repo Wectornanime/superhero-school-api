@@ -4,7 +4,7 @@ Documentação da API.
 ### Tópicos
 - [Métodos](#metodos)
 - [Respostas](#respostas)
-- rotas
+- [Rotas](#rotas)
 
 Este documento visa explicar a forma de comunicação e acesso às rotas do projeto.
 
