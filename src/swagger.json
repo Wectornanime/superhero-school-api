@@ -1,0 +1,323 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "API da Superhero School",
+    "description": "Esta API contem as rotas para acessar os dados da Superhero School",
+    "version": "v1",
+    "contact": {
+      "name": "Superhero School",
+      "email": "superheroschool@example.com"
+    }
+  },
+  "servers": [
+    {
+      "url": "http://localhost:5000",
+      "description": "server"
+    }
+  ],
+  "paths": {
+    "/supers": {
+      "post": {
+        "summary": "Cadastra um super",
+        "description": "Esta rota é responsável por cadastrar um novo super no sistema.",
+        "tags": [
+          "Supers"
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SuperCreate"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Criado",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/SuperResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Error"
+          }
+        }
+      },
+      "get": {
+        "summary": "Listar todas os supers",
+        "description": "Esta rota é responsável por listar todos os supers cadastrados.",
+        "tags": [
+          "Supers"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SuperResponse"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/supers/{id}": {
+      "get": {
+        "summary": "Puxar os dados de um super por id",
+        "description": "Esta rota retorna os dados do super do id correspondente.",
+        "tags": [
+          "Supers"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "id do super",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/SuperResponse"
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "Não encontrado"
+          }
+        }
+      },
+      "put": {
+        "summary": "Atualizar os dados de um super por id",
+        "description": "Esta rota é responsável por atualizar os dados do super do id correspondente.",
+        "tags": [
+          "Supers"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "id do super",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SuperUpdate"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Criado",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/SuperResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Error"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Remover um super por id",
+        "description": "Esta rota é responsável por remover o super do id correspondente do sistema.",
+        "tags": [
+          "Supers"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "id do super",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Error"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "SuperCreate": {
+        "type": "object",
+        "properties": {
+          "heroName": {
+            "type": "string",
+            "description": "Como o super é conhecido"
+          },
+          "firstName": {
+            "type": "string",
+            "description": "Nome do super"
+          },
+          "lastName": {
+            "type": "string",
+            "description": "Sobrenome do super"
+          },
+          "realName": {
+            "type": "string",
+            "nullable": true,
+            "description": "Nome real do super, caso ele não seja da Terra"
+          },
+          "birthDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true,
+            "description": "Data de nascimento do super"
+          },
+          "race": {
+            "type": "string",
+            "nullable": true,
+            "description": "Raça do super"
+          },
+          "height": {
+            "type": "string",
+            "nullable": true,
+            "description": "Altura do super"
+          },
+          "weight": {
+            "type": "string",
+            "nullable": true,
+            "description": "Peso do super"
+          }
+        }
+      },
+      "SuperUpdate": {
+        "type": "object",
+        "properties": {
+          "heroName": {
+            "type": "string",
+            "nullable": true,
+            "description": "Como o super é conhecido"
+          },
+          "firstName": {
+            "type": "string",
+            "nullable": true,
+            "description": "Nome do super"
+          },
+          "lastName": {
+            "type": "string",
+            "nullable": true,
+            "description": "Sobrenome do super"
+          },
+          "realName": {
+            "type": "string",
+            "nullable": true,
+            "description": "Nome real do super, caso ele não seja da Terra"
+          },
+          "birthDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true,
+            "description": "Data de nascimento do super"
+          },
+          "race": {
+            "type": "string",
+            "nullable": true,
+            "description": "Raça do super"
+          },
+          "height": {
+            "type": "string",
+            "nullable": true,
+            "description": "Altura do super"
+          },
+          "weight": {
+            "type": "string",
+            "nullable": true,
+            "description": "Peso do super"
+          }
+        }
+      },
+      "SuperResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "ID do super"
+          },
+          "heroName": {
+            "type": "string",
+            "description": "Como o super é conhecido"
+          },
+          "firstName": {
+            "type": "string",
+            "description": "Nome do super"
+          },
+          "lastName": {
+            "type": "string",
+            "description": "Sobrenome do super"
+          },
+          "realName": {
+            "type": "string",
+            "nullable": true,
+            "description": "Nome real do super, caso ele não seja da Terra"
+          },
+          "birthDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true,
+            "description": "Data de nascimento do super"
+          },
+          "race": {
+            "type": "string",
+            "nullable": true,
+            "description": "Raça do super"
+          },
+          "height": {
+            "type": "string",
+            "nullable": true,
+            "description": "Altura do super"
+          },
+          "weight": {
+            "type": "string",
+            "nullable": true,
+            "description": "Peso do super"
+          }
+        }
+      }
+    }
+  }
+}
